@@ -1,0 +1,25 @@
+/* body {background-image: url("../images/gemback.jpg");
+        background-repeat: no-repeat;
+  }
+*/
+  #main-content {
+    padding-top: 50px;
+  }
+
+  #xNum {text-align: center;}
+  #guess {text-align: center; width: 100%;}
+  #win, #loss {text-align: center; width: 90%;}
+  #msgLine {text-align: center; width: 100%;}
+
+  .gimg {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+  }
+
+  #grpBtns, #btn1, #btn2, #btn3, #btn4 , #btn5 {
+      text-align: center;
+       margin: 10px;
+  }
+
+  #resetBtn {text-align: center;}

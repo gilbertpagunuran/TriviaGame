@@ -20,7 +20,7 @@
     <div class="container">
       
         <div class="nav navbar-header"> 
-            <h3>Trivial Matters</h3>
+            <h3>Geography Bee</h3>
         </div>
          
         <h5>
@@ -35,39 +35,30 @@
   <div class="container" id="main-content"> 
     
     <div class="row">
-      <h1 id="xNum"></h1>
+      <h1 id="xNum">0</h1>
     </div>
 
     <div class="row">
-        <div class="col-sm-3">
-            <h3 id="win">Win: 0</h3> 
-        </div>
-
-        <div class="col-sm-6">
-            <h3 id="guess"></h3>
-        </div>
-
-        <div class="col-sm-3">
-            <h3 id="loss">Loss: 0</h3> 
-        </div>
+      <h4 id="qLine"></h4>
     </div>
 
     <div class="row">
         <div class="row" id="grpBtns">
-          <button id="btn1"><img src="assets/images/blueg.jpg" class="gimg"></button>
-          <button id="btn2"><img src="assets/images/redg.jpg" class="gimg"></button>
-          <button id="btn3"><img src="assets/images/goldg.jpg" class="gimg"></button>
-          <button id="btn4"><img src="assets/images/greeng.jpg" class="gimg"></button>
+          <button id="btn1" value="ans1">answer1</button>
+          <button id="btn2" value="ans2">answer2</button>
+          <button id="btn3" value="ans3">answer3</button>
+          <button id="btn4" value="ans4">answer4</button>
         </div>
 
-        <div class="row" id="resetBtn">
+    <!--    <div class="row" id="resetBtn">
             <button id="btn5">
             <img src="assets/images/gemback.jpg" class="gimg">
             </button>
         </div>
+    -->
 
         <div class="row">
-          <h3 id="msgLine"></h3>
+          <h4 id="msgLine"></h4>
         </div>
       </div>
 
@@ -90,13 +81,10 @@
         </div>
 
         <div class="modal-body"> 
-          <p>A player is given a random number to match at the start of the game. <br>
-             There are four crystals with varying values. <br>
-             Each click will add the assigned value to a player's score. <br>
-             A player's goal is to accumulate a total matching the random number shown without going over. <br>
-             A player wins by matching his score to the number displayed. <br>
-             The game is perpetually played after each round. <br>
-             Click on the odd GEM to reset the games. <br>
+          <p>A player is given 10 seconds to guess the correct answer. <br>
+             Ten questions for each round. <br>
+             At the end of a round, player's score is shown and asked to play again. <br>
+          <br>
           </p>
         </div>
       </div>   

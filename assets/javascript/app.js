@@ -6,7 +6,8 @@ var status = 0;
 var score = 0;
 var loss = 0;
 var ansList = [];
-var buttonActive = false; 
+var buttonActive = false;
+var delayDuration = 2000; 
 
 var sCount = 0;
 var qCount = 0;
@@ -67,7 +68,7 @@ var z = setInterval(secCounter, 1000);
      
       sCount = 0;
       $("#xNum").html(sCount);      // reset time count to 0
-      setTimeout(timeDelay,3000);  // and wait 3 seconds
+      setTimeout(timeDelay,delayDuration);  // and wait 3 seconds
     }
   }
 
@@ -79,16 +80,29 @@ var z = setInterval(secCounter, 1000);
         score = 0;
      }
 
-     z = setInterval(secCounter, 1000);   // restart timer
-     $("#msgLine").html("");
-     askQuestion();                      // ask new question
-    roundNo++;
-    buttonActive = false;                // enable buttons
+    sCount = 0;
+    $("#xNum").html(sCount);      // reset time count to 0
+
+    z = setInterval(secCounter, 1000);   // restart timer
+    $("#msgLine").html("");
+
+    askQuestion();                      // ask new question
+    roundNo++;                          // question count
+    buttonActive = false;               // enable buttons
+     $("#btn1").show(500);
+     $("#btn2").show(500);
+     $("#btn3").show(500);
+     $("#btn4").show(500);
+
   }
 
   $("#btn1").on("click",function(){     
      if (buttonActive) {return;}
      buttonActive = true;
+
+     $("#btn2").hide(500);
+     $("#btn3").hide(500);
+     $("#btn4").hide(500);
 
      if (correctItem == 0) {
         score++;
@@ -99,9 +113,9 @@ var z = setInterval(secCounter, 1000);
         $("#msgLine").html(correctAnswer);   //show correct answer
      }
     clearInterval(z);
-    sCount = 0;
-    $("#xNum").html(sCount);      // reset time count to 0
-    setTimeout(timeDelay,3000);  // and wait 3 seconds
+  //  sCount = 0;
+  //  $("#xNum").html(sCount);      // reset time count to 0
+    setTimeout(timeDelay,delayDuration);  // and wait 3 seconds
 
   });
 
@@ -109,6 +123,10 @@ var z = setInterval(secCounter, 1000);
 
     if (buttonActive) {return;}
      buttonActive = true;
+
+     $("#btn1").hide(500);
+     $("#btn3").hide(500);
+     $("#btn4").hide(500);
 
      if (correctItem == 1) {
         score++;
@@ -119,9 +137,9 @@ var z = setInterval(secCounter, 1000);
         $("#msgLine").html(correctAnswer);   //show correct answer
      }
     clearInterval(z);
-    sCount = 0;
-    $("#xNum").html(sCount);      // reset time count to 0
-    setTimeout(timeDelay,3000);  // and wait 3 seconds
+  //  sCount = 0;
+  //  $("#xNum").html(sCount);      // reset time count to 0
+    setTimeout(timeDelay,delayDuration);  // and wait 3 seconds
 
   });
 
@@ -129,6 +147,10 @@ var z = setInterval(secCounter, 1000);
 
     if (buttonActive) {return;}
      buttonActive = true;
+
+     $("#btn1").hide(500);
+     $("#btn2").hide(500);
+     $("#btn4").hide(500);
 
      if (correctItem == 2) {
         score++;
@@ -139,9 +161,9 @@ var z = setInterval(secCounter, 1000);
         $("#msgLine").html(correctAnswer);   //show correct answer
      }
     clearInterval(z);
-    sCount = 0;
-    $("#xNum").html(sCount);      // reset time count to 0
-    setTimeout(timeDelay,3000);  // and wait 3 seconds
+  //  sCount = 0;
+  //  $("#xNum").html(sCount);      // reset time count to 0
+    setTimeout(timeDelay,delayDuration);  // and wait 3 seconds
 
   });
 
@@ -149,6 +171,10 @@ var z = setInterval(secCounter, 1000);
 
       if (buttonActive) {return;}
      buttonActive = true;
+
+     $("#btn1").hide(500);
+     $("#btn2").hide(500);
+     $("#btn3").hide(500);
 
      if (correctItem == 3) {
         score++;
@@ -159,9 +185,9 @@ var z = setInterval(secCounter, 1000);
         $("#msgLine").html(correctAnswer);   //show correct answer
      }
     clearInterval(z);
-    sCount = 0;
-    $("#xNum").html(sCount);      // reset time count to 0
-    setTimeout(timeDelay,3000);  // and wait 3 seconds
+  //  sCount = 0;
+  //  $("#xNum").html(sCount);      // reset time count to 0
+    setTimeout(timeDelay,delayDuration);  // and wait 3 seconds
 
   });
 
